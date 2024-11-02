@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_10_30_042119) do
+ActiveRecord::Schema[7.2].define(version: 2024_11_02_183227) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -22,6 +22,8 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_30_042119) do
     t.string "mood"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.float "thirst_modifier"
+    t.float "hunger_modifier"
   end
 
   create_table "foods", force: :cascade do |t|
@@ -31,5 +33,6 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_30_042119) do
     t.string "flavor"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "utilization", default: 0
   end
 end
