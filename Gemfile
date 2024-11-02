@@ -59,4 +59,5 @@ group :test do
   gem "rspec-rails"
   gem 'database_cleaner-active_record'
   gem "simplecov"
+  gem 'shoulda-matchers', '~> 6.0'
 end
