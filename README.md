@@ -32,11 +32,12 @@ I think that starting with something already kind of set up will work better. Ne
 
 The idea is to add some crazy stuff that requires composition, advanced tests, error handling, and maybe API responses.
 
-1. Model Setups and Clean Interfaces
-2. Testing tips and tricks
-3. Composition
-4. Error handling
-5. API design
+1. Modeling
+2. Interfaces
+3. Composition 
+4. Testing and Shared Contexts
+5. 
+
 
 ## Branch Intent
 

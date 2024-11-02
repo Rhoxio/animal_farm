@@ -13,6 +13,16 @@ describe Animal do
       expect(described_class.const_defined?(:MAX_CONSUMPTION_THRESHOLD)).to eq(true)
       expect(described_class::MAX_CONSUMPTION_THRESHOLD.is_a?(Integer)).to eq(true)
     end
+
+    it "HUNGER_BREAKPOINT" do
+      expect(described_class.const_defined?(:HUNGER_BREAKPOINT)).to eq(true)
+      expect(described_class::HUNGER_BREAKPOINT.is_a?(Integer)).to eq(true)
+    end
+
+    it "THIRST_BREAKPOINT" do
+      expect(described_class.const_defined?(:THIRST_BREAKPOINT)).to eq(true)
+      expect(described_class::THIRST_BREAKPOINT.is_a?(Integer)).to eq(true)
+    end
   end
 
   context "mood" do
