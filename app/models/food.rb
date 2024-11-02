@@ -1,7 +1,7 @@
 class Food < ApplicationRecord
   UTILIZATION_TOP_END = 100
   UTILIZATION_BOTTOM_END = 0
-  UTILIZATION_ATTRIBUTES = [:calories, :hydration]
+  UTILIZATION_ATTRIBUTES = [:calories, :hydration].freeze
 
   validates :utilization, numericality: { greater_than_or_equal_to: UTILIZATION_BOTTOM_END,
                                           less_than_or_equal_to: UTILIZATION_TOP_END }
@@ -26,5 +26,8 @@ class Food < ApplicationRecord
   def not_utilized?
     utilization == UTILIZATION_BOTTOM_END
   end
+
+  alias_method :consumed?, :fully_utilized?
+  alias_method :fresh?, :not_utilized?
 
 end
