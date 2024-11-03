@@ -62,7 +62,6 @@ describe Animal do
 
     context "hungry?" do
       it "accurately checks relative hunger levels" do
-        ap elephant
         mouse.update!(hunger: mouse.hunger_threshold - 1)
         expect(mouse.hungry?).to eq(true)
 

@@ -19,12 +19,20 @@ class Animal < ApplicationRecord
   end
 
   def hunger_threshold
-    maximum_hunger / HUNGER_BREAKPOINT
+    maximum_hunger / hunger_breakpoint
   end
 
   def thirst_threshold
     # Animals are thisty more often than hungry and are more sentitive to thirst
-    maximum_thirst / THIRST_BREAKPOINT
+    maximum_thirst / thirst_breakpoint
+  end
+
+  def hunger_breakpoint
+    HUNGER_BREAKPOINT
+  end
+
+  def thirst_breakpoint
+    THIRST_BREAKPOINT
   end
 
   # Without reasonable convention, we keep these methods static.
