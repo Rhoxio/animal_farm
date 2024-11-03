@@ -1,6 +1,6 @@
 class Animal < ApplicationRecord
   # 100 works as our standard meter for consumption mechanics
-  MAX_CONSUMPTION_THRESHOLD = 100
+  MAX_CONSUMPTION_METER = 100
   HUNGER_BREAKPOINT = 10
   THIRST_BREAKPOINT = 5
 
@@ -10,7 +10,7 @@ class Animal < ApplicationRecord
   CONSUMPTION_ATTRIBUES.each do |consumption_attribute|
     # maximum_hunger, for example
     define_method "maximum_#{consumption_attribute}" do
-      MAX_CONSUMPTION_THRESHOLD * self.public_send("#{consumption_attribute}_modifier")
+      MAX_CONSUMPTION_METER * self.public_send("#{consumption_attribute}_modifier")
     end
   end
 

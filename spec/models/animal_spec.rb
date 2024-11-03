@@ -9,9 +9,9 @@ describe Animal do
       expect(described_class::MOODS.is_a?(Array)).to eq(true)
     end
 
-    it "MAX_CONSUMPTION_THRESHOLD" do
-      expect(described_class.const_defined?(:MAX_CONSUMPTION_THRESHOLD)).to eq(true)
-      expect(described_class::MAX_CONSUMPTION_THRESHOLD.is_a?(Integer)).to eq(true)
+    it "MAX_CONSUMPTION_METER" do
+      expect(described_class.const_defined?(:MAX_CONSUMPTION_METER)).to eq(true)
+      expect(described_class::MAX_CONSUMPTION_METER.is_a?(Integer)).to eq(true)
     end
 
     it "HUNGER_BREAKPOINT" do
@@ -62,6 +62,7 @@ describe Animal do
 
     context "hungry?" do
       it "accurately checks relative hunger levels" do
+        ap elephant
         mouse.update!(hunger: mouse.hunger_threshold - 1)
         expect(mouse.hungry?).to eq(true)
 
